@@ -1,4 +1,3 @@
-```yaml
 name: Build and Test
 
 on:
@@ -22,7 +21,7 @@ jobs:
     
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [16.x, 18.x, 20.x]
     
     steps:
       - name: Checkout code
@@ -108,4 +107,3 @@ jobs:
           echo "🎯 Test Run Summary"
           echo "==================="
           echo "✅ All tests completed"
-```

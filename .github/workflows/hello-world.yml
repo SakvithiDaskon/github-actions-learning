@@ -22,7 +22,8 @@ jobs:
       - name: Access secret
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
-        run: echo "Secret length: ${#TEST_SECRET}"
+        run: |
+          echo "Secret length: ${#TEST_SECRET}"
 
       # Print success message
       - name: Print success message

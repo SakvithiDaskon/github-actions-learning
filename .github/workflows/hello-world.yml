@@ -12,11 +12,17 @@ jobs:
     steps:
       # Checkout repository code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # List project files
       - name: List files
         run: ls -la
+
+      # Access GitHub secret
+      - name: Access secret
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+        run: echo "Secret length: ${#TEST_SECRET}"
 
       # Print success message
       - name: Print success message
